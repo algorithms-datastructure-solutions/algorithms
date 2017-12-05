@@ -49,7 +49,7 @@ public class FindEarliestDigitalTime {
 	}
 
 	private static Set<String> getPermutations(String s, char a) {
-		Set<String> permutations = new HashSet<String>();
+		Set<String> permutations = new TreeSet<String>();
 		for (int i = 0; i <= s.length(); i++) {
 			String temp = s.substring(0, i) + a + s.substring(i);
 			permutations.add(temp);
