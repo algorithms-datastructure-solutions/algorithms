@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 /**
@@ -10,8 +11,8 @@ public class BalancedBrackets {
 
 		Stack<String> brackets = new Stack<String>();
 
-		String current = brackets.pop();
-		while (!brackets.isEmpty()) {
+		for (int i = 0; i < expression.length(); i++) {
+			String current = "" + expression.charAt(i);
 			switch (current) {
 			case "{":
 			case "[":
@@ -22,15 +23,18 @@ public class BalancedBrackets {
 			case "}":
 			case "]":
 			case ")":
-				if (!brackets.isEmpty()) {
-					String last = brackets.pop();
+				String last;
+				try {
+					last = brackets.pop();
 					if ((current.equals("}") && !last.equals("{")) || (current.equals("]") && !last.equals("["))
 							|| (current.equals(")") && !last.equals("(")))
-						return "No";
+						return "NO";
+				} catch (EmptyStackException ese) {
+					return "NO";
 				}
 			}
 		}
-
-		return "Yes";
+		return brackets.isEmpty() ? "YES" : "NO";
 	}
+
 }
