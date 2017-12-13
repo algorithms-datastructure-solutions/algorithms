@@ -1,4 +1,7 @@
 
+/**
+ * @author medany
+ */
 
 public class Node {
 	int data;

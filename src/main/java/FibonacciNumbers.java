@@ -1,3 +1,8 @@
+
+/**
+ * @author medany
+ */
+
 import java.math.BigInteger;
 
 /**

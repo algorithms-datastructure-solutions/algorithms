@@ -1,7 +1,7 @@
-import static org.junit.Assert.assertEquals;
 
 import java.math.BigInteger;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -17,7 +17,7 @@ public class FibonacciNumbersTest {
 		BigInteger actual = alg.solve(1), expected = BigInteger.ONE;
 
 		System.out.println(actual);
-		assertEquals(expected, actual);
+		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
@@ -27,7 +27,7 @@ public class FibonacciNumbersTest {
 		BigInteger actual = alg.solve(5), expected = BigInteger.valueOf(5);
 
 		System.out.println(actual);
-		assertEquals(expected, actual);
+		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
@@ -37,7 +37,7 @@ public class FibonacciNumbersTest {
 		BigInteger actual = alg.solve(10), expected = BigInteger.valueOf(55);
 
 		System.out.println(actual);
-		assertEquals(expected, actual);
+		Assert.assertEquals(expected, actual);
 	}
 
 	@Test
@@ -49,6 +49,6 @@ public class FibonacciNumbersTest {
 				"43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875");
 
 		System.out.println(actual);
-		assertEquals(expected, actual);
+		Assert.assertEquals(expected, actual);
 	}
 }
