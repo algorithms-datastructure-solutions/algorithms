@@ -4,9 +4,9 @@
 
 public class Date {
 
-	int year;
-	int month;
-	int day;
+	Integer year;
+	Integer month;
+	Integer day;
 
 	public Date(String date) {
 		String[] d = date.split("-");
