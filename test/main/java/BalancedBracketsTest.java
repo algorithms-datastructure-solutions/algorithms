@@ -74,9 +74,7 @@ public class BalancedBracketsTest {
 				Assert.assertEquals(expected, actual);
 			}
 
-		} catch (
-
-		IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			try {
